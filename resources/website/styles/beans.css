@@ -1,0 +1,57 @@
+[data-role="bean_container"]{
+	display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+[data-role="bean_container"] > div{
+    flex: 1;
+    margin: 2%;
+    padding-bottom: 0;
+    /* background-color: #343434; */
+    min-width: 300px;
+    border: 1px solid #b8b7b7;
+}
+
+
+[data-bean_type] h2{
+    background: #343434;
+    display: inline-block;
+    padding: 12px 24px;
+    color: white;
+    text-indent: 36px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+[data-bean_type="robusta"] h2{
+    background-image: url(/images/beans/robusta.png);
+    background-color: #bf9310;
+}
+[data-bean_type="arabica"] h2{
+    background-image: url(/images/beans/arabica.png);
+    background-color: #8b0102;
+}
+[data-bean_type="liberica"] h2{
+    background-image: url(/images/beans/liberica.png);
+    background-color: #146c64;
+}
+[data-bean_type="excelsa"] h2{
+    background-image: url(/images/beans/excelsa.png);   
+    background-color: #607d8b;
+}
+
+[data-bean_type] p{
+    background: #a57449;
+    padding: 12px 24px;
+    color: white;
+}
+
+[data-bean_type] h5{
+    text-align: right;
+    color: #f2e15b;
+    padding: 6px;
+    background-color: #434343;
+}
+[data-role="browse_coffee_content"] > section > div > h4{
+
+    top: 6px;
+}

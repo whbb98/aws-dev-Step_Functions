@@ -1,0 +1,45 @@
+ {
+ 	"product_item_arr": [{
+		"product_name_str": "apple pie slice",
+		"product_id_str": "a444",
+		"price_in_cents_int": 595,
+		"description_str":"Frank's homemade pie with flakey crust - yum!",
+		"tag_str_arr": ["pie slice","on offer"],
+		"special_int": 1
+	},{
+		"product_name_str":  "apple pie",
+		"product_id_str": "a447",
+		"price_in_cents_int": 4595,
+		"description_str": "amazing taste",
+		"tag_str_arr": ["whole pie", "on offer2"],
+		"special_int": 1
+	},{
+		"product_name_str": "chocolate chip cupcake",
+		"product_id_str": "a448",
+		"price_in_cents_int": 495,
+		"description_str": "yummy!",
+		"tag_str_arr": ["cupcakes", "on offer"],
+		"special_int": 1
+	},{
+		"product_name_str": "strawberry cupcake",
+		"product_id_str": "a452",
+		"price_in_cents_int": 495,
+		"description_str": "yummy!",
+		"tag_str_arr": ["cupcakes", "on offer"],
+		"special_int": 1
+	},{
+		"product_name_str": "blueberry jelly doughnut",
+		"product_id_str": "a455",
+		"price_in_cents_int": 295,
+		"description_str": "so good!",
+		"tag_str_arr":["doughnut", "on offer"],
+		"special_int": 1
+	},{
+		"product_name_str": "plain bagel",
+		"product_id_str": "a465",
+		"price_in_cents_int": 395,
+		"description_str": "so good!",
+		"tag_str_arr": ["bagel", "on offer"],
+		"special_int": 1
+	}]
+}

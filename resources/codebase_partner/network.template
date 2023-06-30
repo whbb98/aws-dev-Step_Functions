@@ -1,0 +1,131 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "Amazing supplier api",
+    "Resources": {
+        "NodeServerSecurityGroup": {
+            "Metadata": {
+                "Comment": "I can remove the 22 later"
+            },
+            "Type": "AWS::EC2::SecurityGroup",
+            "Properties": {
+                "GroupDescription": "Enable HTTP access via port 8000 and 80 + SSH access",
+                "SecurityGroupIngress": [
+                    {
+                        "IpProtocol": "tcp",
+                        "FromPort": "22",
+                        "ToPort": "22",
+                        "CidrIp": "0.0.0.0/0"
+                    },
+                    {
+                        "IpProtocol": "tcp",
+                        "FromPort": "8000",
+                        "ToPort": "8000",
+                        "CidrIp": "0.0.0.0/0"
+                    },
+                    {
+                        "IpProtocol": "tcp",
+                        "FromPort": "80",
+                        "ToPort": "80",
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ]
+            }
+        },
+        "MySQLServerSecurityGroup": {
+            "Metadata": {
+                "Comment": "I can remove the 22 later"
+            },
+            "Type": "AWS::EC2::SecurityGroup",
+            "Properties": {
+                "GroupDescription": "Enable mysql access via port 3306 ad ssh for now",
+                "SecurityGroupIngress": [
+                    {
+                        "IpProtocol": "tcp",
+                        "FromPort": "22",
+                        "ToPort": "22",
+                        "CidrIp": "0.0.0.0/0"
+                    },
+                    {
+                        "IpProtocol": "tcp",
+                        "FromPort": "3306",
+                        "ToPort": "3306",
+                        "CidrIp": "0.0.0.0/0"
+                    }
+                ]
+            }
+        },
+        "NodeServer": {
+            "Metadata": {
+                "Comment": "Hard coded ununtu 20 image id and my ghost keypair and us-east-1"
+            },
+            "Type" : "AWS::EC2::Instance",
+            "Properties": {
+                "ImageId": "ami-03d315ad33b9d49c4",
+                "InstanceType": "t2.micro",
+                "SecurityGroups": [{
+                    "Ref": "NodeServerSecurityGroup"
+                }],
+                "KeyName": "ghost",
+                "Tags" : [{
+                      "Key" : "Name",
+                      "Value" : "NodeRickyUbuntu"
+                }],
+                "UserData" : { "Fn::Base64" : { "Fn::Join" : ["", [
+                     "#!/bin/bash -x\n",
+                     "exec > /tmp/part-001.log 2>&1\n",
+                     "sudo apt update -y\n",
+                     "sudo apt install nodejs -y\n",
+                     "sudo apt install unzip -y\n",
+                     "sudo apt install wget -y\n",
+                     "sudo apt install npm -y\n",
+                     "DB_IP_STR=",{ "Fn::GetAtt" : [ "MySqlServer", "PrivateIp" ] }, "\n",
+                     "export MYSQL_DB_IP_STR=$DB_IP_STR\n",
+                     "wget https://aws-tc-largeobjects.s3-us-west-2.amazonaws.com/CUR-TF-200-ACCDEV-2/lab-06-containers/code.zip -P /home/ubuntu\n",
+                     "sudo unzip /home/ubuntu/code.zip\n",
+                     "cd home/ubuntu/resources/codebase_partner\n",
+                     "npm install\n",
+                     "echo $MYSQL_DB_IP_STR\n"
+                     "npm start"
+                ]]}}
+            },
+            "DependsOn": "MySqlServer"
+        },
+        "MySqlServer": {
+            "Metadata": {
+                "Comment": "Hard coded ununtu 20 image id and my ghost keypair and us-east-1, node is install for testing"
+            },
+            "Type" : "AWS::EC2::Instance",
+            "Properties": {
+                "ImageId": "ami-03d315ad33b9d49c4",
+                "InstanceType": "t2.micro",
+                "SecurityGroups": [{
+                    "Ref": "MySQLServerSecurityGroup"
+                }],
+                "KeyName": "ghost",
+                "Tags" : [{
+                      "Key" : "Name",
+                      "Value" : "MySqlRickyUbuntu"
+                }],
+                "UserData" : { "Fn::Base64" : { "Fn::Join" : ["", [
+                     "#!/bin/bash -x\n",
+                     "exec > /tmp/part-001.log 2>&1\n",
+                     "apt update -y\n",
+                     "apt install mysql-server -y\n",
+                     "mysql -e \"CREATE USER 'nodeapp' IDENTIFIED WITH mysql_native_password BY 'coffee';\" \n",
+                     "mysql -e \"GRANT all privileges on *.* to 'nodeapp'@'%';\"\n",
+                     "mysql -e \"CREATE DATABASE COFFEE;\"\n",
+                     "mysql -e \"USE COFFEE;\"\n",
+                     "mysql -e \"CREATE TABLE coffee (SupplierName varchar(255);\"\n",
+                     "mysql -e \"INSERT INTO coffee (SupplierName) VALUES ('ricky');\"\n",
+                     "mysql -e \"INSERT INTO coffee (SupplierName) VALUES ('miranda');\"\n",
+                     "mysql -e \"INSERT INTO coffee (SupplierName) VALUES ('dave');\"\n",
+                     "mysql -e \"FLUSH PRIVILEGES;\"\n",
+                     "sed -i 's/.*bind-address.*/bind-address = 0.0.0.0/' /etc/mysql/mysql.conf.d/mysqld.cnf\n",
+                     "service mysql restart\n",
+                     "apt install nodejs -y\n",
+                     "apt install npm -y\n"
+                ]]}}
+            }
+        }
+    }
+}

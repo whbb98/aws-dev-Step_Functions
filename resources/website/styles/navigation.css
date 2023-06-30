@@ -1,0 +1,162 @@
+header{
+	pointer-events: none;
+	position: relative;
+	z-index: 2;
+}
+header[data-expanded="not_expanded"]{
+	/*background-color: orange;*/
+}
+header[data-expanded="expanded"]{
+
+}
+header > h1{
+    background-color: #ffffffab;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    min-width: 300px;
+    z-index: 1;
+    position: relative;
+    height: 64px;
+    line-height: 64px;
+    font-size: 37px;
+    letter-spacing: 14px;
+    color: #343434;
+    font-weight: 900;
+}
+header > span{
+	position: absolute;
+    top: 6px;
+    left: 12px;
+	/*background-color: pink;*/
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	pointer-events: auto;
+	cursor: pointer;
+	opacity: 0.8;
+	transition: background-image 0s ease 0.05s,
+				opacity 0s ease 0.05s;
+	z-index: 1;
+}
+header > span:hover{
+	opacity: 1;
+}
+header[data-expanded="not_expanded"] > span{
+	background-image: url("/images/not_expanded.png");
+	opacity: 0.4;
+}
+header[data-expanded="expanded"] > span{
+	background-image: url("/images/expanded.png");
+	opacity: 0.4;
+}
+header > ul{
+	background-color: #ffffffab;
+	position: absolute;
+	transition: transform 0.24s ease-in-out 0s;
+	width: 100%;
+	min-width: 300px;
+	border-bottom: 1px solid #f1f1f1;
+}
+header > ul > li{
+	border-bottom: 1px solid black;
+    margin: 24px;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 32px;
+    font-size: 14px;
+    pointer-events: auto;
+    cursor: pointer;
+    letter-spacing: 0.1em;	
+    transition: color 0.24s ease-in-out 0s,
+    			border-color 0.24s ease-in-out 0s;
+}
+header > ul > li:after{
+	content: '>\00a0';
+	width: 48px;
+	height: 48px;
+	float: right;
+	color: black;
+}
+header > ul > li:hover{
+	color: grey;
+	border-color: grey;
+}
+header > ul > li:hover:after{
+	color: grey;
+}
+header ul,
+header[data-expanded="not_expanded"] ul{
+	transform: translateY(-320px);
+}
+header[data-expanded="expanded"] ul{
+	transform: translateY(0px);
+}
+header > aside[data-action="attempt_login"],
+header > aside[data-action="attempt_create_report"]{
+	text-transform: uppercase;
+    text-decoration: none;
+    position: absolute;
+    opacity: 0.9;
+    z-index: 1;
+    /*width: 48px;*/
+    /*height: 48px;*/
+    top: 24px;
+    right: 62px;
+    font-weight: 900;
+    letter-spacing: .2em;
+    /* font-family: 'Zen Dots'; */
+    color: #343434;
+    cursor: pointer;
+    pointer-events: auto;
+    text-underline-offset: 0.4em;
+    transition: opacity 0.24s ease-in-out 0s;
+}
+header > aside:hover{
+	opacity: 1;
+	text-decoration: underline;
+}
+
+[data-role2="special_highlight"]{
+	background-color: #335f6b;
+    width: 500px;
+    height: 180px;
+    position: absolute;
+    right: -6px;
+    top: 200px;
+    border-radius: 6px;
+    line-height: 100px;
+    text-indent: 24px;
+    font-size: 20px;
+    transform: translate3d(500px, 0, 0);
+    transition: transform 0.24s cubic-bezier(0.57, -0.57, 0.1, 1.69) 1s;
+    border: 2px solid #aeacac;
+    color: white;
+}
+[data-role2="special_highlight"][data-showing="showing"]{
+	transform: translate3d(70px, 0, 0);
+    background-image: url(/images/items/apple_pie.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: lighten;
+    text-shadow: 1px 1px 0px #1d1b1d;
+    color: #ffffff;
+    line-height: 41px;
+    cursor: pointer;
+}
+
+[data-role2="special_highlight"][data-showing="showing"] > div{
+background: #2b24257a;
+    height: 36px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+
+}
+[data-role2="special_highlight"][data-showing="showing"]:hover{
+    background-blend-mode: unset;
+}
+
+

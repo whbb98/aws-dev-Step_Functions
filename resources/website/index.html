@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-Us">
+	<head>
+		<title>Cafe website</title>
+		<link href="/favicon.ico" rel="icon" type="image/x-icon" />
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Zen+Dots&display=swap" rel="stylesheet">
+		<!-- <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet"> -->
+		<link rel="stylesheet" href="styles/reset.css" />
+		<link rel="stylesheet" href="styles/main.css" />
+		<link rel="stylesheet" href="styles/navigation.css" />
+		<link rel="stylesheet" href="styles/pastries.css" />
+		<link rel="stylesheet" href="styles/coffee.css" />
+		<link rel="stylesheet" href="styles/beans.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+	</head>
+	<body>
+		<section>
+			<header data-expanded="not_expanded">
+				<h1>
+					The Caf&eacute;
+					<!-- <img src="images/logo.png" /> -->
+				</h1>
+				<span data-action="toggle_navigation"></span>
+				<ul>
+					<li data-action="go_to" data-role="about_us">about us</li>
+					<li data-action="go_to" data-role="browse_pastries">browse pastries</li>
+					<li data-action="go_to" data-role="buy_coffee">buy coffee</li>
+					<li data-action="go_to" data-role="contact_us">contact us</li>
+				</ul>
+				<aside data-action="attempt_login">login</aside>
+			</header>
+			<div class="main_image"></div>
+			<span data-role2="special_highlight" data-action="go_to" data-role="browse_pastries">
+
+				All our pastries are made fresh every day!
+				<div></div>
+			</span>
+			<main>
+
+				<section data-role="about_us_content">
+					<a name="about_us">back_to_top</a>
+					<h2>About Us</h2>
+					<p>
+						Welcome!
+						<br><br>
+						Frank and Martha have been adding sweetness to their customers' lives
+					  since they opened their cafe in 2018.
+						Frank's recipes have been passed down from his mother and use simple
+						and fresh ingredients to produce delightful flavors.
+						Both of them will personally greet you with a welcoming smile when you visit!
+						<br><br>
+						We cater to different customers.
+						Some are morning early birds who want to enjoy the atmosphere.
+						Others need to hurry out with a takeaway cup.
+						Still others want to spend a lazy Saturday morning people-watching over a good espresso and conversation.
+						<br><br>
+						Browse our offerings here and please come visit us in person soon!
+					</p>
+				</section>
+
+				<section data-role="browse_pastries_content">
+					<a name="browse_pastries">back to top</a>
+					<h2>browse pastries</h2>
+					<aside>
+						Frank bakes a rich variety of doughnuts and other pastries. Try them all!
+					</aside>
+					<span data-selected="not_selected" data-action="show_all">view all</span>
+					<span data-selected="selected" data-action="show_on_offer">on offer</span>
+					<output data-role="toast"></output>
+				</section>
+
+				<section data-role="browse_coffee_content">
+					<a name="buy_coffee">back to top</a>
+					<h2>buy coffee</h2>
+					<aside>
+						<br>
+						&nbsp;&nbsp;
+						We offer a wide variety of globally sourced fair trade gourmet coffees, including single origin.
+						<br>
+						&nbsp;&nbsp;
+						Try a delicious Ethiopian blend with hints of citrus flavors or one of our signature robust French Roasts.
+						<br><br><br>
+					</aside>
+				</section>
+
+				<section data-role="contact_us_content">
+					<a name="contact_us">back to top</a>
+					<h2>contact us</h2>
+					<p>
+						123 Any Street, Any Town, USA<br>Tel: +1-800-555-0193
+					</p>
+					<p>
+						Weekdays: 6:00am - 6:00pm<br>Saturday: 7:00am - 7:00pm<br>Closed on Sundays
+					</p>
+				</section>
+			</main>
+			<footer>
+				<span>&copy; 2021, Amazon Web Services, Inc. or its Affiliates. All rights reserved.</span>
+			</footer>
+		</section>
+		<script src="config.js"></script>
+		<script src="scripts/jquery-3.6.0.min.js"></script>
+		<script src="scripts/main.js"></script>
+		<script src="scripts/navigation.js"></script>
+		<script src="scripts/pastries.js"></script>
+		<script src="scripts/coffee.js"></script>
+	</body>
+</html>

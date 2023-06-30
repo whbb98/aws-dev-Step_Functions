@@ -1,0 +1,35 @@
+{{>header}}
+<div class="container">
+    {{>nav}}
+    <h1>All beans</h1>
+    <div><code>{{cache_msg}}</code></div>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">Supplier Id</th>
+            <th scope="col">Type</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Description</th>
+            <th scope="col">Quantity</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#beans}}
+        <tr>
+            <th scope="row">{{supplier_id}}</th>
+            <td>{{type}}</td>
+            <td>{{product_name}}</td>
+            <td>{{price}}</td>
+            <td>{{description}}</td>
+            <td>{{quantity}}</td>
+            <td><h4><span class="badge badge-info"><a class="text-light"
+                                                      href="/bean-update/{{id}}">edit</a></span></h4></td>
+        </tr>
+        {{/beans}}
+        </tbody>
+    </table>
+    <h4><a class="badge badge-success" href="/bean-add">Add a new bean</a></h4>
+</div>
+{{>footer}}

@@ -1,0 +1,88 @@
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+}
+section{
+	/*background-color: yellow;*/
+}
+main{
+    background-color: #daccbe;
+
+}
+main > section{
+	min-height: 400px;
+    /*max-width: 1400px;*/
+    margin: 0 auto;
+    background-color: white;
+}
+.main_image{
+    width: 100%;
+    height: 500px;
+    background-color: black;
+    margin: -64px auto 0 auto;
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
+    position: fixed;
+    background-image: url(../images/main_coffee_shop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0;
+    transform: scale(1);
+    transition: opacity 0.48s ease-in 0.24s;
+                
+}
+.main_image.loaded{
+    opacity: 1;
+    transform: scale(1.2);
+    transition: transform 1.24s ease-in 0s;
+}
+
+main > section > a{
+    opacity: 0.6;
+    cursor: n-resize;
+    transition: opacity 0.24s linear 0s;
+    float: right;
+    color: white;
+    margin: 6px 12px;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 32px;
+    letter-spacing: .1em;
+    margin-top: 10px;
+}
+main > section > a:hover{
+	opacity: 1;
+}
+main > section > h2{
+    background-color: #464646;
+    line-height: 24px;
+    padding: 12px 24px;
+    color: white;
+    text-transform: capitalize;
+    letter-spacing: 2.6px;
+    font-size: 24px;
+}
+main > section > p{
+    padding: 12px 24px;
+    font-size: 1.4em;
+    line-height: 28px;
+    /*width: 100%;*/
+    margin: 0 auto;
+    background: #343434;
+    color:#c3c0bf;
+    padding-bottom: 24px;
+}
+footer{
+	background-color: #343434;
+}
+footer > span{
+    display: block;
+    padding: 12px 24px;
+    color: white;
+    text-align: right;
+}

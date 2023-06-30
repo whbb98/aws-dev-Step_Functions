@@ -1,0 +1,165 @@
+ {
+ 	"product_item_arr": [{
+		"product_name_str": "apple pie slice",
+		"product_id_str": "a444",
+		"price_in_cents_int": 595,
+		"description_str":"A delicious slice of Frank's homemade pie.",
+		"tag_str_arr": ["pie slice","on offer"],
+		"special_int": 1
+	},{
+		"product_name_str": "chocolate cake slice",
+		"product_id_str": "a445",
+		"price_in_cents_int": 595,
+		"description_str":"Chocolate heaven. What's not to like?",
+		"tag_str_arr": ["cake slice","on offer"]
+	},{
+		"product_name_str": "chocolate cake",
+		"product_id_str": "a446",
+		"price_in_cents_int": 4095,
+		"description_str": "Chocolate cake with chocolate icing. A classic.",
+		"tag_str_arr": ["whole cake", "on offer"]
+	},{
+		"product_name_str":  "apple pie",
+		"product_id_str": "a447",
+		"price_in_cents_int": 4595,
+		"description_str": "Frank's homemade pie with flakey crust - yum!",
+		"tag_str_arr": ["whole pie", "on offer"],
+		"special_int": 1
+	},{
+		"product_name_str": "chocolate chip cupcake",
+		"product_id_str": "a448",
+		"price_in_cents_int": 495,
+		"description_str": "A vanilla cupcake with chocolate chips.",
+		"tag_str_arr": ["cupcakes", "on offer"],
+		"special_int": 1
+	},{
+		"product_name_str": "vanilla cupcake",
+		"product_id_str": "a449",
+		"price_in_cents_int": 495,
+		"description_str": "Italian vanilla bean cupcake.",
+		"tag_str_arr": ["cupcakes", "on offer"]
+	},{
+		"product_name_str": "chocolate cupcake",
+		"product_id_str": "a450",
+		"price_in_cents_int": 495,
+		"description_str": "A chocolate cupcake with chocolate frosting.",
+		"tag_str_arr": ["cupcakes", "on offer"]
+	},{
+		"product_name_str": "peanutbutter and chocolate cupcake",
+		"product_id_str": "a451",
+		"price_in_cents_int": 495,
+		"description_str": "Chocolate and peanut butter together.",
+		"tag_str_arr": ["cupcakes", "on offer"]
+	},{
+		"product_name_str": "strawberry cupcake",
+		"product_id_str": "a452",
+		"price_in_cents_int": 495,
+		"description_str": "A fresh strawberry on top!",
+		"tag_str_arr": ["cupcakes", "on offer"],
+		"special_int": 1
+	},{
+		"product_name_str": "vanilla glazed doughnut",
+		"product_id_str": "a453",
+		"price_in_cents_int": 295,
+		"description_str": "so good!",
+		"tag_str_arr": ["doughnut", "on offer"]
+	},{
+		"product_name_str": "cinnamon doughnut",
+		"product_id_str": "a454",
+		"price_in_cents_int": 295,
+		"description_str": "A fluffy doughnut in a cinnamon sugar mix.",
+		"tag_str_arr": ["doughnut", "on offer"]
+	},{
+		"product_name_str": "blueberry jelly doughnut",
+		"product_id_str": "a455",
+		"price_in_cents_int": 295,
+		"description_str": "A doughnut with blueberry jelly filling.",
+		"tag_str_arr":["doughnut", "on offer"],
+		"special_int": 1
+	},{
+		"product_name_str": "chocolate doughnut",
+		"product_id_str": "a455",
+		"price_in_cents_int": 295,
+		"description_str": "A doughnut make with rich milk chocolate.",
+		"tag_str_arr": ["doughnut", "on offer"]
+	},{
+		"product_name_str": "powdered sugar doughnut",
+		"product_id_str": "a456",
+		"price_in_cents_int": 295,
+		"description_str": "A delicious doughnut coated in powdered sugar.",
+		"tag_str_arr": ["doughnut", "on offer"]
+	},{
+		"product_name_str": "raspberry jelly doughnut",
+		"product_id_str": "a457",
+		"price_in_cents_int": 295,
+		"description_str": "A doughnut with raspberry jelly filling.",
+		"tag_str_arr": ["doughnut", "on offer"]
+	},{
+		"product_name_str": "boston cream doughnut",
+		"product_id_str": "a458",
+		"price_in_cents_int": 295,
+		"description_str": "Boston's favorite doughnut, done right.",
+		"tag_str_arr": ["doughnut", "on offer"]
+	},{
+		"product_name_str": "eclair",
+		"product_id_str": "a459",
+		"price_in_cents_int": 295,
+		"description_str": "A delicious french delicacy make with real cream.",
+		"tag_str_arr": ["doughnut", "on offer"]
+	},{
+		"product_name_str": "lemon pie slice",
+		"product_id_str": "a460",
+		"price_in_cents_int": 595,
+		"description_str": "Just the right amount of lemon. A cafe favorite.",
+		"tag_str_arr": ["pie slice", "on offer"]
+	},{
+		"product_name_str": "lemon pie",
+		"product_id_str": "a461",
+		"price_in_cents_int": 4595,
+		"description_str": "The whole lemon pie!",
+		"tag_str_arr": ["whole pie", "on offer"]
+	},{
+		"product_name_str": "cherry pie slice",
+		"product_id_str": "a462",
+		"price_in_cents_int": 595,
+		"description_str": "Deliciously tart bing cherries inside.",
+		"tag_str_arr": ["pie slice", "on offer"]
+	},{
+		"product_name_str": "cherry pie",
+		"product_id_str": "a463",
+		"price_in_cents_int": 4595,
+		"description_str": "A generously sized homemade cherry pie.",
+		"tag_str_arr": ["whole pie", "on offer"]
+	},{
+		"product_name_str": "chocolate iced doughnut",
+		"product_id_str": "a464",
+		"price_in_cents_int": 295,
+		"description_str": "The chocolate makes it so good!",
+		"tag_str_arr": ["doughnut", "on offer"]
+	},{
+		"product_name_str": "plain bagel",
+		"product_id_str": "a465",
+		"price_in_cents_int": 395,
+		"description_str": "Boiled in salt water, then baked. As it should be.",
+		"tag_str_arr": ["bagel", "on offer"],
+		"special_int": 1
+	},{
+		"product_name_str": "poppy seed bagel",
+		"product_id_str":  "a466",
+		"price_in_cents_int": 395,
+		"description_str": "A fresh homemade bagel, with poppy seeds.",
+		"tag_str_arr": ["bagel","on offer"]
+	},{
+		"product_name_str": "garlic bagel",
+		"product_id_str": "a467",
+		"price_in_cents_int": 395,
+		"description_str":"A fresh homemade bagel, with toasted garlic.",
+		"tag_str_arr": ["bagel","on offer"]
+	},{
+		"product_name_str": "blueberry bagel",
+		"product_id_str": "a467",
+		"price_in_cents_int": 395,
+		"description_str": "A fresh homemade bagel, with blueberries.",
+		"tag_str_arr": ["bagel","out of stock"]
+	}]
+}

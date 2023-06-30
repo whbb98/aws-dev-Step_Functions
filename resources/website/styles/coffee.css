@@ -1,0 +1,12 @@
+[data-role="browse_coffee_content"]{
+	min-height: auto;
+}
+[data-role="browse_coffee_content"] > output{
+    background-color: #34606b;
+    padding: 24px 36px;
+    margin: 0 auto;
+    display: block;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}
