@@ -6,7 +6,7 @@ var
 exports.handler = function(event, context, callback){
 
     var mysql = MYSQL.createConnection({
-          host: 'DB-ENDPOINT',
+          host: 'supplierdb.cluster-cwxca1gblqzj.us-east-1.rds.amazonaws.com',
           password: 'coffee',
           user: 'nodeapp',
           database: 'COFFEE'
