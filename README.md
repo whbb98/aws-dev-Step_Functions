@@ -16,12 +16,11 @@
 * Generate a presigned URL for an object stored in an Amazon Simple Storage Service (Amazon S3) bucket
 ---
 ## State Machine:
+![state machine](screenshots/statemachine.png)
 
-![MyStateMachine Architecture](screenshots/myStateMachine.png)
----
 ## SNS Notifications on my Email:
-
 ![sns notification-1](screenshots/sns-1.png)
+---
 ![sns notification-2](screenshots/sns-2.png)
 ---
 ## Pre-signed url Preview:
